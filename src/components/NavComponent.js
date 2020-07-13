@@ -26,7 +26,7 @@ export default function NavComponent() {
             <Nav.Link href="#">Products</Nav.Link>
             <Nav.Link href="#">Services</Nav.Link>
             <Nav.Link href="#">Offices</Nav.Link>
-            <Nav.Link href="#" className="btn btn-primary">
+            <Nav.Link href="/account" className="btn btn-primary">
               Account
             </Nav.Link>
           </Nav>
