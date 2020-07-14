@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, Row, Col, ListGroup } from "react-bootstrap";
+import AddProductOrService from "./AddProductOrService";
 
 export default function MenuDashboard() {
   return (
@@ -17,10 +18,9 @@ export default function MenuDashboard() {
 
         {/* list of dashboard menu */}
         <ListGroup variant="flush">
-          <ListGroup.Item>Add Product</ListGroup.Item>
-          <ListGroup.Item>Add Service</ListGroup.Item>
+          <ListGroup.Item><AddProductOrService/></ListGroup.Item>
           <ListGroup.Item>Settings</ListGroup.Item>
-          <ListGroup.Item>Signout</ListGroup.Item>
+          <ListGroup.Item>Lock Office</ListGroup.Item>
         </ListGroup>
       </Col>
     </Row>

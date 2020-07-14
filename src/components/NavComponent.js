@@ -13,7 +13,7 @@ export default function NavComponent() {
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         {/* logo */}
-        <Navbar.Brand href="#home">MKTP</Navbar.Brand>
+        <Navbar.Brand href="/">MKTP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Search Form */}

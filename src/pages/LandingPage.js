@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from '../components/Header'
 
 export default function LandingPage() {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <Header />
+        </Fragment>
     )
 }
