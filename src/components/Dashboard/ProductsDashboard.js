@@ -20,9 +20,8 @@ for (let card = 0; card < 12; card++) {
             bulk of the card's content.
           </Card.Text>
           <ButtonGroup className="mb-2">
-            <Button variant="primary">Call</Button>
-            <Button variant="warning">Text</Button>
-            <Button variant="success">WhatsApp</Button>
+            <Button variant="primary">Edit</Button>
+            <Button variant="danger">Delete</Button>
           </ButtonGroup>
         </Card.Body>
         <Card.Footer className="text-muted">08031904145</Card.Footer>
