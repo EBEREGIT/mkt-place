@@ -9,6 +9,31 @@ $Grenze: 'Grenze Gotisch', cursive;
 $PMarker: 'Permanent Marker', cursive;
 $Philosopher: 'Philosopher', sans-serif;
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body{
-    
+
+    * {
+        font-family: $Philosopher;
+    }
+
+    // All headings have this style
+    .headings {
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $PMarker;
+    }
+
 }

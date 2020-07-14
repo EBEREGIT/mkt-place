@@ -8,6 +8,7 @@ import NavComponent from './components/NavComponent';
 import LandingPage from './pages/LandingPage';
 import Account from './pages/Account';
 import NotFound from './pages/NotFound';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/account" component={Account} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="*" component={NotFound} />
       </Switch>
     </div>

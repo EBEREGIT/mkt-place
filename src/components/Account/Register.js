@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 export default function Register() {
   return (
     <Fragment>
-      <h3 className="text-center">Register</h3>
+      <h3 className="headings">Create Office</h3>
       <Form>
         {/* phone number */}
         <Form.Group controlId="formBasicEmail">
@@ -25,7 +25,7 @@ export default function Register() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Create
         </Button>
       </Form>
     </Fragment>

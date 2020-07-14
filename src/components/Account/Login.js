@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 export default function Login() {
   return (
     <Fragment>
-      <h3 className="text-center">Login</h3>
+      <h3 className="headings">Login Office</h3>
       <Form>
         {/* phone number */}
         <Form.Group controlId="formBasicEmail">
@@ -19,7 +19,7 @@ export default function Login() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
     </Fragment>

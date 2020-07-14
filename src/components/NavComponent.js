@@ -10,7 +10,7 @@ import {
 
 export default function NavComponent() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         {/* logo */}
         <Navbar.Brand href="#home">MKTP</Navbar.Brand>
