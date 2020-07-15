@@ -6,7 +6,7 @@ import ServicesDashboard from '../components/Dashboard/ServicesDashboard'
 
 export default function Dashboard() {
     return (
-        <Row>
+        <Row id="dashboard">
             {/* Dashboard Menu */}
             <Col md={2} lg={2}>
                 <MenuDashboard />

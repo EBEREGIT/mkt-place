@@ -26,9 +26,8 @@ export default function NavComponent() {
             <Nav.Link href="/products">Products</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/offices">Offices</Nav.Link>
-            <Nav.Link href="/account" className="btn btn-primary">
-              Account
-            </Nav.Link>
+            <Nav.Link href="/account">Account</Nav.Link>
+            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

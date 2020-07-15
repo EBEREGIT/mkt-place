@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 
 let services = [];
 
-for (let service = 0; service < 8; service++) {
+for (let service = 0; service < 40; service++) {
   services.push(<SingleService />);
 }
 
