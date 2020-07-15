@@ -9,6 +9,9 @@ import LandingPage from './pages/LandingPage';
 import Account from './pages/Account';
 import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
+import Products from './pages/Products';
+import Services from './pages/Services';
+import Offices from './pages/Offices';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       
       <Switch>
         <Route exact path="/" component={LandingPage} />
+        <Route path="/products" component={Products} />
+        <Route path="/services" component={Services} />
+        <Route path="/offices" component={Offices} />
         <Route path="/account" component={Account} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="*" component={NotFound} />

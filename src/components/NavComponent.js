@@ -23,9 +23,9 @@ export default function NavComponent() {
           </Form>
           {/* menu */}
           <Nav className="ml-auto">
-            <Nav.Link href="#">Products</Nav.Link>
-            <Nav.Link href="#">Services</Nav.Link>
-            <Nav.Link href="#">Offices</Nav.Link>
+            <Nav.Link href="/products">Products</Nav.Link>
+            <Nav.Link href="/services">Services</Nav.Link>
+            <Nav.Link href="/offices">Offices</Nav.Link>
             <Nav.Link href="/account" className="btn btn-primary">
               Account
             </Nav.Link>
