@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 import Services from './pages/Services';
 import Offices from './pages/Offices';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="*" component={NotFound} />
       </Switch>
+
+      <Footer />
     </div>
   );
 }
