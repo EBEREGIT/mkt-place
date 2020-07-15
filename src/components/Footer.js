@@ -14,14 +14,14 @@ export default function Footer() {
           <FooterAbout />
           <FooterContact />
         </Row>
-
-        {/* Lower Footer */}
-        <Row>
-          <Col xs={12} sm={12} md={12} lg={12} id="lower-footer">
-            <h4>2020 | &copy; Market Place</h4>
-          </Col>
-        </Row>
       </Container>
+
+      {/* Lower Footer */}
+      <Row>
+        <Col xs={12} sm={12} md={12} lg={12} id="lower-footer">
+          <h4>2020 | &copy; Market Place</h4>
+        </Col>
+      </Row>
     </footer>
   );
 }

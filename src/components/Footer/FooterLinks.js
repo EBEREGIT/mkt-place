@@ -4,7 +4,7 @@ import { Col, ListGroup } from "react-bootstrap";
 export default function FooterLinks() {
   return (
     <Col xs={12} sm={12} md={4} lg={4}>
-        <h4>Shortcuts</h4>
+        <h4 className="footer-headings">Shortcuts</h4>
       <ListGroup variant="flush">
         <ListGroup.Item><a href="/products">Products</a></ListGroup.Item>
         <ListGroup.Item><a href="/services">Services</a></ListGroup.Item>

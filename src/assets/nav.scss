@@ -1,0 +1,31 @@
+.navbar {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: white !important;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+    a {
+        font-size: 1.3rem;
+        color: $blue !important;
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: white !important;
+            background-color: $blue;
+        }
+    }
+
+    form {
+        button {
+            background-color: $blue;
+
+            &:hover {
+                background-color: white;
+                color: $blue;
+            }
+        }
+    }
+}

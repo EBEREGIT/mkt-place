@@ -5,16 +5,20 @@ $blue-light: #71cbd6;
 $blue-lighter: #84dde8;
 
 // fonts
-$Grenze: 'Grenze Gotisch', cursive;
-$PMarker: 'Permanent Marker', cursive;
-$Philosopher: 'Philosopher', sans-serif;
+$Grenze: 'Grenze Gotisch',
+cursive;
+$PMarker: 'Permanent Marker',
+cursive;
+$Philosopher: 'Philosopher',
+sans-serif;
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-body{
+body {
 
     * {
         font-family: $Philosopher;
@@ -25,6 +29,8 @@ body{
         margin-top: 10% !important;
         margin-bottom: 10% !important;
         text-align: center;
+        -webkit-text-stroke: 1px white;
+        -webkit-text-fill-color: black;
     }
 
     h1,
@@ -36,26 +42,47 @@ body{
         font-family: $PMarker;
     }
 
-    .card{
+    .card {
         margin-bottom: 10%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
 
-    #dashboard{
+    #dashboard {
         margin: auto;
     }
 
-    .navbar{
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
+    @import "./assets/nav.scss";
 
-    footer{
-        margin-top: 10%;
+    header {
+        height: 400px;
+        width: 100%;
+        background-image: url(https://res.cloudinary.com/dunksyqjj/image/upload/v1594842650/Enugu_MKT_thr1bn.jpg);
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        background-color: $blue;
+        background-blend-mode: overlay;
+        -webkit-text-stroke: 2px black;
+        -webkit-text-fill-color: white;
 
-        #lower-footer{
-            padding-top: 5%;
-            padding-bottom: 5%;
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+            -webkit-text-stroke: 1px white;
+            -webkit-text-fill-color: $blue-lighter;
         }
     }
+
+    main{
+        .see-all-btn{
+            margin-top: 3% !important;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    @import "./assets/footer.scss";
 
 }

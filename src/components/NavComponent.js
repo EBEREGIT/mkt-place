@@ -18,8 +18,8 @@ export default function NavComponent() {
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Search Form */}
           <Form inline className="ml-auto">
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
+            <FormControl type="text" placeholder="Search Market" className="mr-sm-2" />
+            <Button>Search</Button>
           </Form>
           {/* menu */}
           <Nav className="ml-auto">
@@ -27,7 +27,6 @@ export default function NavComponent() {
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/offices">Offices</Nav.Link>
             <Nav.Link href="/account">Account</Nav.Link>
-            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

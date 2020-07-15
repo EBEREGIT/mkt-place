@@ -6,39 +6,41 @@ import MainOffices from "./Main/MainOffices";
 
 export default function Main() {
   return (
-    <Container>
-      {/* Products */}
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={12} className="headings">
-          <h2>Products</h2>
-        </Col>
-        <MainProducts />
-        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
-          <Button>See All Products...</Button>
-        </Col>
-      </Row>
+    <main>
+      <Container>
+        {/* Products */}
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12} className="headings">
+            <h2>Products</h2>
+          </Col>
+          <MainProducts />
+          <Col xs={12} sm={12} md={12} lg={12} className="text-center">
+            <Button className="see-all-btn">See All Products...</Button>
+          </Col>
+        </Row>
 
-      {/* Services */}
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={12} className="headings">
-          <h2>Services</h2>
-        </Col>
-        <MainServices />
-        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
-          <Button>See All Services...</Button>
-        </Col>
-      </Row>
+        {/* Services */}
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12} className="headings">
+            <h2>Services</h2>
+          </Col>
+          <MainServices />
+          <Col xs={12} sm={12} md={12} lg={12} className="text-center">
+            <Button className="see-all-btn">See All Services...</Button>
+          </Col>
+        </Row>
 
-      {/* Offices */}
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={12} className="headings">
-          <h2>Offices</h2>
-        </Col>
-        <MainOffices />
-        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
-          <Button>See All Offices...</Button>
-        </Col>
-      </Row>
-    </Container>
+        {/* Offices */}
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12} className="headings">
+            <h2>Offices</h2>
+          </Col>
+          <MainOffices />
+          <Col xs={12} sm={12} md={12} lg={12} className="text-center">
+            <Button className="see-all-btn">See All Offices...</Button>
+          </Col>
+        </Row>
+      </Container>
+    </main>
   );
 }

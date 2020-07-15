@@ -1,17 +1,20 @@
 import React from "react";
-import { Container, Jumbotron } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <header>
-      <Jumbotron fluid>
-        <Container>
-          <h1>Enugu Market Place</h1>
-          <p>
-            ...Connecting you to your local market...
-          </p>
-        </Container>
-      </Jumbotron>
+    <header className="text-center d-flex align-items-center">
+      <Container className="">
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <p>Welcome</p>
+            <h1>Enugu Market Place</h1>
+            <p>...Connecting you to your local market...</p>
+          </Col>
+
+
+        </Row>
+      </Container>
     </header>
   );
 }
