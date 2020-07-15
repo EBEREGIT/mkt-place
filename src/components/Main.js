@@ -13,7 +13,7 @@ export default function Main() {
           <h2>Products</h2>
         </Col>
         <MainProducts />
-        <Col xs={12} sm={12} md={12} lg={12}>
+        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
           <Button>See All Products...</Button>
         </Col>
       </Row>
@@ -24,7 +24,7 @@ export default function Main() {
           <h2>Services</h2>
         </Col>
         <MainServices />
-        <Col xs={12} sm={12} md={12} lg={12}>
+        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
           <Button>See All Services...</Button>
         </Col>
       </Row>
@@ -35,7 +35,7 @@ export default function Main() {
           <h2>Offices</h2>
         </Col>
         <MainOffices />
-        <Col xs={12} sm={12} md={12} lg={12}>
+        <Col xs={12} sm={12} md={12} lg={12} className="text-center">
           <Button>See All Offices...</Button>
         </Col>
       </Row>
