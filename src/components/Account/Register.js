@@ -10,7 +10,8 @@ const schema = yup.object().shape({
     .number("Phone Number must be an number")
     .required("Phone Number must be filled")
     .positive("Phone Number must be a positive number"),
-  password: yup.string().required("Password must be filled"),
+  password: yup.string().required("Password must be entered"),
+  shop: yup.string().required("Shop Name must be entered")
 });
 
 export default function Register() {
@@ -63,6 +64,7 @@ export default function Register() {
             ref={register}
             placeholder="Enter Shop Name"
           />
+          {<p className="text-danger">{errors.shop?.message}</p>}
         </Form.Group>
 
         <Button variant="primary" type="submit">
