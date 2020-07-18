@@ -39,7 +39,7 @@ export default function Login() {
             ref={register}
             placeholder="Enter Phone Number"
           />
-          {<p>{errors.phoneNumber?.message}</p>}
+          {<p className="text-danger">{errors.phoneNumber?.message}</p>}
         </Form.Group>
 
         {/* password */}
@@ -51,7 +51,7 @@ export default function Login() {
             ref={register}
             placeholder=" Enter Password"
           />
-          {<p>{errors.password?.message}</p>}
+          {<p className="text-danger">{errors.password?.message}</p>}
         </Form.Group>
 
         <Button variant="primary" type="submit">
