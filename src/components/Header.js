@@ -8,8 +8,8 @@ export default function Header() {
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
             <p>Welcome</p>
-            <h1>Enugu Market Place</h1>
-            <p>...Connecting you to your local market...</p>
+            <h1>Smart Market</h1>
+            <p>...Connecting you to your Enugu market...</p>
           </Col>
 
 
