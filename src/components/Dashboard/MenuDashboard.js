@@ -1,12 +1,13 @@
 import React from "react";
 import { Image, Row, Col, ListGroup } from "react-bootstrap";
 import AddProductOrService from "./AddProductOrService";
+import Logout from "../Account/Logout";
 
 export default function MenuDashboard() {
   return (
     <Row className="text-center">
       <Col>
-      {/* profile image or office logo */}
+        {/* profile image or office logo */}
         <Image
           src="https://svgsilh.com/svg/659651.svg"
           width="100px"
@@ -18,9 +19,18 @@ export default function MenuDashboard() {
 
         {/* list of dashboard menu */}
         <ListGroup variant="flush">
-          <ListGroup.Item><AddProductOrService/></ListGroup.Item>
+          {/* add */}
+          <ListGroup.Item>
+            <AddProductOrService />
+          </ListGroup.Item>
+
+          {/* settings */}
           <ListGroup.Item>Settings</ListGroup.Item>
-          <ListGroup.Item>Lock Office</ListGroup.Item>
+
+          {/* logout */}
+          <ListGroup.Item>
+            <Logout />
+          </ListGroup.Item>
         </ListGroup>
       </Col>
     </Row>

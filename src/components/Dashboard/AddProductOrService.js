@@ -38,6 +38,11 @@ const schema = yup.object().shape({
 });
 
 function AddForm() {
+  // set form fields
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+  const [description, setDescription] = useState("");
+
   // get needed variables from useForm
   const { register, handleSubmit, errors } = useForm({
     mode: "onBlur",
@@ -59,6 +64,8 @@ function AddForm() {
           name="name"
           ref={register}
           placeholder="Enter Name of product or Service"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         {<p className="text-danger">{errors.name?.message}</p>}
       </Form.Group>
@@ -66,7 +73,13 @@ function AddForm() {
       {/* Select Product or Service */}
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Type</Form.Label>
-        <Form.Control as="select" name="type" ref={register}>
+        <Form.Control
+          as="select"
+          name="type"
+          ref={register}
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        >
           <option>Product</option>
           <option>Service</option>
         </Form.Control>
@@ -81,6 +94,8 @@ function AddForm() {
           name="description"
           ref={register}
           placeholder="Enter Other Details"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         />
         {<p className="text-danger">{errors.description?.message}</p>}
       </Form.Group>
