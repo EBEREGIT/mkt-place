@@ -1,8 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import { withRouter } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
+import Cookies from "universal-cookie";
+import axios from "axios";
+const cookies = new Cookies();
 
 // validation schema
 const schema = yup.object().shape({
@@ -13,7 +17,11 @@ const schema = yup.object().shape({
   password: yup.string().required("Password must be filled"),
 });
 
-export default function Login() {
+function Login(props) {
+  // setup form fields
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+
   // get needed variables from useForm
   const { register, handleSubmit, errors } = useForm({
     mode: "onBlur",
@@ -22,7 +30,26 @@ export default function Login() {
 
   // function called when form is submitted
   const onSubmit = ({ phoneNumber, password }) => {
-    alert(`Phone Number: ${phoneNumber}, Password: ${password}`);
+    const url = "https://afia.sjcmsportal.com/api/login",
+      method = "post",
+      data = {
+        phone: phoneNumber,
+        password: password,
+      },
+      headers = {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      };
+
+    // create office 
+    axios({ url, method, headers, data })
+      .then((result) => {
+        // create cookie with the token returned
+        cookies.set("AUTH-TOKEN", result.data.response.token, { path: "/" });
+        // redirect user to the feeds page
+        props.history.push("/dashboard");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -38,6 +65,8 @@ export default function Login() {
             name="phoneNumber"
             ref={register}
             placeholder="Enter Phone Number"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
           {<p className="text-danger">{errors.phoneNumber?.message}</p>}
         </Form.Group>
@@ -50,6 +79,8 @@ export default function Login() {
             name="password"
             ref={register}
             placeholder=" Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           {<p className="text-danger">{errors.password?.message}</p>}
         </Form.Group>
@@ -61,3 +92,5 @@ export default function Login() {
     </Fragment>
   );
 }
+
+export default withRouter(Login);
