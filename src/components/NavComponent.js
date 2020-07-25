@@ -13,12 +13,24 @@ export default function NavComponent() {
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         {/* logo */}
-        <Navbar.Brand href="/">MKTP</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img
+            src="https://res.cloudinary.com/dunksyqjj/image/upload/v1595679355/LogoMakr_5jlVdJ_vrzwn6.png"
+            width="60"
+            height="40"
+            className="d-inline-block align-top"
+            alt="Smart Market logo"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Search Form */}
           <Form inline className="ml-auto">
-            <FormControl type="text" placeholder="Search Market" className="mr-sm-2" />
+            <FormControl
+              type="text"
+              placeholder="Search Market"
+              className="mr-sm-2"
+            />
             <Button>Search</Button>
           </Form>
           {/* menu */}
