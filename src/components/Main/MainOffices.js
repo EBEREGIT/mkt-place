@@ -5,7 +5,11 @@ let offices = [];
 
 for (let office = 0; office < 8; office++) {
     offices.push(
-        <SingleOffice />
+        <SingleOffice
+            officeName="Office Name"
+            officeImage="https://www.designevo.com/res/templates/thumb_small/shield-3d-letter-h-and-d.png"
+            officeNumber="08031904145"
+        />
     )    
 }
 
