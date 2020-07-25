@@ -3,7 +3,7 @@ import { Col, Card, ButtonGroup, Button } from "react-bootstrap";
 
 export default function SingleService(props) {
   return (
-    <Col xs={12} sm={12} md={3} lg={3}>
+    <Col xs={12} sm={12} md={6} lg={3}>
       <Card style={{ width: "100%" }}>
         <Card.Img
           variant="top"
