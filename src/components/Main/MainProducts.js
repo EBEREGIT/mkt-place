@@ -1,23 +1,43 @@
-import React, { Fragment } from 'react'
-import SingleProduct from './SingleProduct';
+// external imports
+import React, { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 
-let products = [];
-
-for (let product = 0; product < 8; product++) {
-    products.push(
-        <SingleProduct
-            productName="Product Name"
-            productImage="https://assets.entrepreneur.com/content/3x2/2000/how-read-website-source-code.jpg"
-            productDescription="When React sees an element representing a user-defined component."
-            officeNumber="08031904145"
-        />
-    )    
-}
+// internal import
+import SingleProduct from "./SingleProduct";
 
 export default function MainProducts() {
-    return (
-        <Fragment>
-            {products}
-        </Fragment>
-    )
+  // set all product state
+  const [allProducts, setProducts] = useState([]);
+
+  //   make API call
+  useEffect(() => {
+    axios("https://afia.sjcmsportal.com/api/all-products")
+      .then((result) => {
+        setProducts(result);
+      })
+      .catch((error) => {
+        error = Error;
+      });
+  }, []);
+
+  //   collect each product and make them an array
+  const products = [];
+  for (let eachProduct in allProducts.data) {
+    products.push(allProducts.data[eachProduct]);
+  }
+
+  return (
+    <Fragment>
+      {products[0] &&
+        products[0].length > 0 &&
+        products[0].map((product) => (
+          <SingleProduct
+            productName={product.name}
+            productImage={product.photo}
+            productDescription={product.description}
+            officeNumber="08031904145"
+          />
+        ))}
+    </Fragment>
+  );
 }
