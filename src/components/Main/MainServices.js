@@ -20,8 +20,6 @@ export default function MainServices() {
       });
   }, []);
 
-  console.log(allServices.data);
-
   //   collect each Service and make them an array
   const services = [];
   for (let eachService in allServices.data) {
