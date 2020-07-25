@@ -41,6 +41,7 @@ function AddForm() {
   // set form fields
   const [name, setName] = useState("");
   const [type, setType] = useState("");
+  const [itemImage, setItemImage] = useState("")
   const [description, setDescription] = useState("");
 
   // get needed variables from useForm
@@ -50,8 +51,8 @@ function AddForm() {
   });
 
   // function called when form is submitted
-  const onSubmit = ({ name, type, description }) => {
-    alert(`name: ${name}, type: ${type}, description: ${description}`);
+  const onSubmit = ({ name, itemImage, type, description }) => {
+    alert(`name: ${name}, ${itemImage}, type: ${type}, description: ${description}`);
   };
 
   return (
@@ -68,6 +69,20 @@ function AddForm() {
           onChange={(e) => setName(e.target.value)}
         />
         {<p className="text-danger">{errors.name?.message}</p>}
+      </Form.Group>
+
+      {/* Image of product or Service */}
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Photo</Form.Label>
+        <Form.Control
+          type="file"
+          name="itemImage"
+          ref={register}
+          placeholder="Enter Name of product or Service"
+          value={itemImage}
+          onChange={(e) => setItemImage(e.target.value)}
+        />
+        {<p className="text-danger">{errors.itemImage?.message}</p>}
       </Form.Group>
 
       {/* Select Product or Service */}
