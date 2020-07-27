@@ -3,6 +3,9 @@ import { Button, Modal, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
 import * as yup from "yup";
+import axios from "axios";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
 export default function AddProductOrService() {
   const [show, setShow] = useState(false);
@@ -35,13 +38,14 @@ export default function AddProductOrService() {
 const schema = yup.object().shape({
   name: yup.string().required("Name must be entered"),
   description: yup.string().required("Description must be entered"),
+  itemImage: yup.string().required("Image must be entered"),
 });
 
 function AddForm() {
   // set form fields
   const [name, setName] = useState("");
   const [type, setType] = useState("");
-  const [itemImage, setItemImage] = useState("")
+  const [itemImage, setItemImage] = useState("");
   const [description, setDescription] = useState("");
 
   // get needed variables from useForm
@@ -51,8 +55,50 @@ function AddForm() {
   });
 
   // function called when form is submitted
-  const onSubmit = ({ name, itemImage, type, description }) => {
-    alert(`name: ${name}, ${itemImage}, type: ${type}, description: ${description}`);
+  const onSubmit = () => {
+    // get cookie from browser if logged in
+    const token = cookies.get("AUTH-TOKEN"),
+      method = "post",
+      url = "https://afia.sjcmsportal.com/api/products",
+      headers = {
+        Authorization: `Basic ${token}`,
+      };
+
+    // console.log(data);
+    console.log(itemImage);
+
+    // instantiate new FIleReader Class
+    let imageData = new FileReader();
+
+    // set the path of the image
+    imageData.readAsDataURL(itemImage);
+
+    // when the path is set, make the API call
+    console.log(imageData);
+    imageData.onload = (e) => {
+      "image upload"
+      console.log(e.target.result)
+
+      const data = {
+        type,
+        name,
+        desc: description,
+        photo: e.target.result
+      };
+
+      console.log(data)
+      // make API call
+        axios({
+          method,
+          url,
+          data,
+          headers,
+        })
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((e) => console.log(e));
+    };
   };
 
   return (
@@ -78,9 +124,9 @@ function AddForm() {
           type="file"
           name="itemImage"
           ref={register}
+          defaultValue={itemImage}
           placeholder="Enter Name of product or Service"
-          value={itemImage}
-          onChange={(e) => setItemImage(e.target.value)}
+          onChange={(e) => setItemImage(e.target.files[0])}
         />
         {<p className="text-danger">{errors.itemImage?.message}</p>}
       </Form.Group>
@@ -95,6 +141,7 @@ function AddForm() {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
+          <option>Select Type</option>
           <option>Product</option>
           <option>Service</option>
         </Form.Control>
