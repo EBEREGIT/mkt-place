@@ -11,8 +11,6 @@ export default function Header() {
             <h1>Smart Market</h1>
             <p>...Connecting you to Enugu market...</p>
           </Col>
-
-
         </Row>
       </Container>
     </header>
