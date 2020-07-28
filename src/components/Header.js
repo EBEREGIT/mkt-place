@@ -7,9 +7,9 @@ export default function Header() {
       <Container className="">
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <p>Welcome</p>
+            <p>Welcome to</p>
             <h1>Smart Market</h1>
-            <p>...Connecting you to your Enugu market...</p>
+            <p>...Connecting you to Enugu market...</p>
           </Col>
 
 

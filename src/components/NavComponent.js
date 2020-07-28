@@ -13,7 +13,7 @@ export default function NavComponent() {
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
         {/* logo */}
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src="https://res.cloudinary.com/dunksyqjj/image/upload/v1595679355/LogoMakr_5jlVdJ_vrzwn6.png"
             width="60"
