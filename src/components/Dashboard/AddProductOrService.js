@@ -64,9 +64,6 @@ function AddForm() {
         Authorization: `Basic ${token}`,
       };
 
-    // console.log(data);
-    console.log(itemImage);
-
     // instantiate new FIleReader Class
     let imageData = new FileReader();
 
@@ -74,11 +71,7 @@ function AddForm() {
     imageData.readAsDataURL(itemImage);
 
     // when the path is set, make the API call
-    console.log(imageData);
     imageData.onload = (e) => {
-      "image upload"
-      console.log(e.target.result)
-
       const data = {
         type,
         name,

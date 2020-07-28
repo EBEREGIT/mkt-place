@@ -35,7 +35,7 @@ export default function MainProducts() {
             productName={product.name}
             productImage={product.photo}
             productDescription={product.description}
-            officeNumber="08031904145"
+            officeNumber={product.phone}
           />
         ))}
     </Fragment>

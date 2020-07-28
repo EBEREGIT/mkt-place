@@ -5,7 +5,7 @@ let cardComponent = [];
 
 for (let card = 0; card < 12; card++) {
   cardComponent.push(
-    <Col xs={12} sm={12} md={6} lg={6}>
+    <Col xs={12} sm={12} md={12} lg={6}>
       <Card style={{ width: "100%" }}>
         <Card.Img
           variant="top"

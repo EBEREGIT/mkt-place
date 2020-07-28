@@ -35,7 +35,7 @@ export default function MainServices() {
             serviceName={service.name}
             serviceImage={service.photo}
             serviceDescription={service.description}
-            officeNumber="08031904145"
+            officeNumber={service.phone}
           />
         ))}
     </Fragment>

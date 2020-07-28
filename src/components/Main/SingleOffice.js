@@ -7,7 +7,7 @@ export default function SingleOffice(props) {
       <Card style={{ width: "100%" }}>
         <Card.Img
           variant="top"
-          src={props.officeImage}
+          src="https://res.cloudinary.com/dunksyqjj/image/upload/v1595679355/LogoMakr_5jlVdJ_vrzwn6.png"
           width="100%"
           height="150px"
         />
