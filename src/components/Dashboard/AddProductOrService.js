@@ -61,8 +61,10 @@ function AddForm() {
       method = "post",
       url = "https://afia.sjcmsportal.com/api/products",
       headers = {
-        Authorization: `Basic ${token}`,
+        Authorization: `Bearer ${token}`,
       };
+
+      console.log(token)
 
     // instantiate new FIleReader Class
     let imageData = new FileReader();
@@ -85,7 +87,7 @@ function AddForm() {
           method,
           url,
           data,
-          headers,
+          headers
         })
           .then((result) => {
             console.log(result);
